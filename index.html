@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div class="start-container" id="start-container">
+        <h1>Welcome to the Quiz App!</h1>
+        <p>Instruction:</p>
+        <p>Total number of questions: 5</p>
+        <button id="start-quiz-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="quiz-container" id="quiz-container" style="display: none;">
+        <div class="quiz-box">
+            <h2>Random Quiz App</h2>
+            <h3 id="question-title">Question 1 of 5</h3>
+            <p id="question">What is the capital of France?</p>
+            <div class="options">
+                <button class="option-btn" onclick="checkAnswer(this)">Paris</button>
+                <button class="option-btn" onclick="checkAnswer(this)">Berlin</button>
+                <button class="option-btn" onclick="checkAnswer(this)">Madrid</button>
+                <button class="option-btn" onclick="checkAnswer(this)">Rome</button>
+            </div>
+            <p id="score">Score: 0</p>
+            <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next</button>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="result-container" id="result-container" style="display: none;">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Total Question</td>
+                <td id="total-questions">0</td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td id="attempted-questions">0</td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td id="correct-answers">0</td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td id="wrong-answers">0</td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td id="percentage">0%</td>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+                <td id="final-score">0</td>
+            </tr>
+        </table>
+        <button id="try-again-btn">Try Again</button>
+        <button id="go-home-btn">Go To Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
